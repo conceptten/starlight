@@ -87,6 +87,17 @@ In `package.json` add
 }
 ```
 
+In `tsconfig.json` add
+
+```json
+{
+  "compilerOptions": {
+    "jsxImportSource": "solid-js",
+    "jsx": "preserve"
+  }
+}
+```
+
 Create a `tailwind.config.cjs` with the following contents
 
 ```js
