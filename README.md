@@ -73,8 +73,8 @@ In `package.json` add
 ```json
 {
   "scripts": {
-    "lint": "prettier --ignore-path ../.gitignore --check . '!**/*.mdx' && eslint --ignore-path ../.gitignore",
-    "format": "prettier --ignore-path ../.gitignore --write ."
+    "lint": "prettier --check . '!**/*.mdx' && eslint",
+    "format": "prettier --write ."
   },
   "eslintConfig": {
     "extends": [
