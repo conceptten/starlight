@@ -1,6 +1,6 @@
 {
   "name": "@concept10/starlight",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CONCEPT10 Starlight plugin",
   "author": "Stijn Vermeiren <stijn@concept10.be>",
   "license": "MIT",
@@ -32,20 +32,20 @@
   },
   "devDependencies": {
     "@typescript-eslint/parser": "^6.14.0",
-    "@vitest/coverage-v8": "^0.33.0",
-    "postcss": "^8.4.27",
-    "vitest": "^0.33.0",
-    "husky": "^8.0.0"
+    "@vitest/coverage-v8": "^1.0.4",
+    "husky": "^8.0.0",
+    "postcss": "^8.4.32",
+    "vitest": "^1.0.4"
   },
   "peerDependencies": {
-    "astro": ">=4.0.0",
     "@astrojs/solid-js": "^3.0.2",
     "@astrojs/starlight": ">=0.15.0",
-    "@astrojs/starlight-tailwind": "^2.0.1",
-    "@astrojs/tailwind": "^5.0.0",
+    "@astrojs/starlight-tailwind": ">=2.0.0",
+    "@astrojs/tailwind": ">=5.0.0",
+    "astro": ">=4.0.0",
     "eslint": "^8.55.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-astro": "^0.30.0",
+    "eslint-plugin-astro": "^0.31.0",
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "prettier": "^3.1.1",
     "prettier-plugin-astro": "^0.12.2",
