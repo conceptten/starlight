@@ -1,0 +1,42 @@
+---
+interface Props {
+	endpoint: string;
+	pick: string;
+	filtered?: boolean;
+}
+
+const { endpoint, pick, filtered = false } = Astro.props;
+import { Icon } from '@astrojs/starlight/components';
+import FilteredList from './FilteredList.tsx';
+
+const response = await fetch(`http://localhost:8055/static/${endpoint}`);
+const responseJson = await response.json();
+
+const data = pick ? responseJson[pick] : responseJson;
+---
+
+{
+	filtered ? (
+		<FilteredList data={data} client:visible />
+	) : (
+		<ul class="ps-6">
+			{data.map((item) => (
+				<li class="list-none">
+					<a
+						href={item.path}
+						data-umami-event={`download/list/${item.name}`}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						{item.extension === '.pdf' ? (
+							<Icon name="document" class="inline-block mr-1" />
+						) : (
+							<Icon name="right-caret" class="inline-block mr-1" />
+						)}
+						{item.name}
+					</a>
+				</li>
+			))}
+		</ul>
+	)
+}

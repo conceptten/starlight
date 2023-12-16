@@ -1,0 +1,35 @@
+---
+import { Icon } from '@astrojs/starlight/components';
+---
+
+<aside aria-label="Warning" class="aside--warning">
+	<Icon name="warning" />
+	<section class="aside__content">
+		<slot />
+	</section>
+</aside>
+
+<style is:global>
+	.sl-markdown-content .aside--warning {
+		display: flex;
+		flex-direction: row;
+		/** background-color: var(--sl-color-orange-low); */
+		margin: 1rem 0;
+	}
+	.sl-markdown-content .aside--warning svg {
+		width: 1.5rem;
+		height: 1.5rem;
+		min-width: 1.5rem;
+		min-height: 1.5rem;
+		margin-right: 1rem;
+		color: var(--sl-color-orange-high);
+	}
+	.sl-markdown-content section.aside__content {
+		margin: 0;
+		border-left: 2px solid var(--sl-color-orange-high);
+		padding-left: 0.5rem;
+	}
+	.sl-markdown-content section.aside__content p:first-child {
+		display: inline-block;
+	}
+</style>

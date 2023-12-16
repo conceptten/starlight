@@ -1,0 +1,14 @@
+---
+const { term, description } = Astro.props;
+---
+
+<dt>{term}</dt>
+{
+	description ? (
+		<dd>{description}</dd>
+	) : (
+		<dd>
+			<slot />
+		</dd>
+	)
+}

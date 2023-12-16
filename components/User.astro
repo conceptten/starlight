@@ -1,0 +1,107 @@
+---
+import { Icon } from '@astrojs/starlight/components';
+---
+
+<script>
+	const res = await fetch('./', { method: 'HEAD' });
+	const headers = await res.headers;
+	const user = headers.get('x-authentik-username');
+
+	const el = document.querySelector('#username');
+	el.innerHTML = user;
+</script>
+
+<div class="user-details">
+	<div class="user-details__main">
+		<span class="sr-only">User Details</span>
+		<svg
+			class="icon user"
+			xmlns="http://www.w3.org/2000/svg"
+			width="32"
+			height="32"
+			viewBox="0 0 24 24"
+			><path
+				fill="currentColor"
+				d="M12 12q-1.65 0-2.825-1.175T8 8q0-1.65 1.175-2.825T12 4q1.65 0 2.825 1.175T16 8q0 1.65-1.175 2.825T12 12Zm-8 8v-2.8q0-.85.438-1.563T5.6 14.55q1.55-.775 3.15-1.163T12 13q1.65 0 3.25.388t3.15 1.162q.725.375 1.163 1.088T20 17.2V20H4Z"
+			></path></svg
+		>
+		<span id="username"></span>
+		<Icon name="down-caret" class="icon caret" />
+	</div>
+	<div class="user-actions">
+		<a href="https://sso.concept10.net/flows/-/default/invalidation/" data-umami-event="logout">
+			<svg
+				class="icon logout"
+				xmlns="http://www.w3.org/2000/svg"
+				width="32"
+				height="32"
+				viewBox="0 0 24 24"
+				><path
+					fill="currentColor"
+					d="M6 2h9a2 2 0 0 1 2 2v2h-2V4H6v16h9v-2h2v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"
+				></path><path
+					fill="currentColor"
+					d="M16.09 15.59L17.5 17l5-5l-5-5l-1.41 1.41L18.67 11H9v2h9.67z"></path></svg
+			>
+			 Log Out
+		</a>
+	</div>
+</div>
+
+<style>
+	a {
+		text-decoration: none;
+		color: var(--sl-color-gray-1);
+	}
+	a:hover {
+		color: var(--sl-color-gray-2);
+	}
+	.user-details {
+		position: relative;
+		display: inline-block;
+	}
+	.user-actions {
+		display: none;
+		position: absolute;
+		min-width: 10rem;
+		background-color: var(--sl-color-bg-nav);
+		padding: 1.5rem 1rem 0.5rem;
+		box-shadow: 3px 3px 8px 0px var(--sl-color-bg);
+	}
+	.user-actions a {
+		display: flex;
+		align-items: center;
+		gap: 0.25rem;
+	}
+	.user-details__main {
+		display: flex;
+		align-items: center;
+		gap: 0.25rem;
+		--sl-label-icon-size: 0.875rem;
+		--sl-caret-size: 1.25rem;
+		color: var(--sl-color-gray-1);
+		cursor: pointer;
+	}
+	.user-details__main:hover {
+		color: var(--sl-color-gray-2);
+	}
+	.user-details:hover .user-actions {
+		display: block;
+	}
+	svg.user {
+		font-size: var(--sl-label-icon-size);
+	}
+	.caret {
+		font-size: var(--sl-caret-size);
+	}
+	.icon.user,
+	.icon.logout {
+		font-size: var(--sl-caret-size);
+		width: 1em;
+		height: 1em;
+		margin-right: 0.15em;
+	}
+	#username {
+		display: inline-block;
+	}
+</style>

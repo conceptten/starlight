@@ -1,0 +1,52 @@
+---
+const { align } = Astro.props;
+---
+
+<dl class:list={['definitionlist', align || 'right']}>
+	<slot />
+</dl>
+
+<style is:global>
+	dl.definitionlist {
+		margin: 2rem 0;
+		display: grid;
+		column-gap: 1rem;
+		@media (min-width: 475px) {
+			grid-template-columns: auto 1fr;
+			row-gap: 0.5rem;
+		}
+	}
+
+	dl.definitionlist.right dt {
+		@media (min-width: 475px) {
+			text-align: right;
+		}
+	}
+
+	dl.definitionlist dt {
+		font-weight: 700;
+		margin-top: 0 !important;
+		margin-bottom: 0.25rem;
+		@media (min-width: 475px) {
+			margin-bottom: unset;
+			margin-top: unset;
+		}
+	}
+
+	dl.definitionlist dd {
+		margin-left: 1rem;
+		margin-top: 0 !important;
+	}
+
+	dl.definitionlist dd p:first-child {
+		margin-top: 0px;
+	}
+
+	dl.definitionlist dd p br {
+		margin: 0 !important;
+	}
+
+	dl.definitionlist aside.starlight-aside {
+		margin-bottom: 1rem;
+	}
+</style>
