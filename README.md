@@ -10,6 +10,18 @@ config.
 
 ## Setup
 
+A starter template can be found at
+[conceptten/starlight-template](https://github.com/conceptten/starlight-template).
+To get started quickly, run
+
+```shell
+npx degit conceptten/starlight-template ./my-project-name
+cd my-project-name
+git init
+```
+
+Or, to add it to an existing project, follow these steps:
+
 First, create a new [starlight](https://starlight.astro.build/) project and
 install the additional dependencies
 
