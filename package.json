@@ -4,13 +4,13 @@
   "description": "CONCEPT10 Starlight plugin",
   "author": "Stijn Vermeiren <stijn@concept10.be>",
   "license": "MIT",
-  "homepage": "https://gitlab.com/conceptten/starlight/",
+  "homepage": "https://github.com/conceptten/starlight/",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/conceptten/starlight"
+    "url": "https://github.com/conceptten/starlight"
   },
   "bugs": {
-    "url": "https://gitlab.com/conceptten/starlight/-/issues"
+    "url": "https://github.com/conceptten/starlight/issues"
   },
   "type": "module",
   "files": [
