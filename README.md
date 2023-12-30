@@ -50,7 +50,7 @@ Add the `@concept10/starlight` package to `package.json`
 ```json
 {
   "dependencies": {
-    "@concept10/starlight": "git+https://github.com/conceptten/starlight.git#v1.0.4"
+    "@concept10/starlight": "git+https://github.com/conceptten/starlight.git#v1.0.5"
   }
 }
 ```
