@@ -1,6 +1,6 @@
 {
   "name": "@concept10/starlight",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "CONCEPT10 Starlight plugin",
   "author": "Stijn Vermeiren <stijn@concept10.be>",
   "license": "MIT",
@@ -31,14 +31,14 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@typescript-eslint/parser": "^6.14.0",
-    "@vitest/coverage-v8": "^1.0.4",
+    "@typescript-eslint/parser": "^6.19.0",
+    "@vitest/coverage-v8": "^1.2.1",
     "husky": "^8.0.0",
-    "postcss": "^8.4.32",
-    "vitest": "^1.0.4"
+    "postcss": "^8.4.33",
+    "vitest": "^1.2.1"
   },
   "peerDependencies": {
-    "@astrojs/solid-js": "^3.0.2",
+    "@astrojs/solid-js": "^4.0.1",
     "@astrojs/starlight": ">=0.15.0",
     "@astrojs/starlight-tailwind": ">=2.0.0",
     "@astrojs/tailwind": ">=5.0.0",
@@ -48,15 +48,15 @@
     "eslint-plugin-astro": "^0.31.0",
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "prettier": "^3.1.1",
-    "prettier-plugin-astro": "^0.12.2",
+    "prettier-plugin-astro": "^0.13.0",
     "tailwindcss": "^3.3.3"
   },
   "dependencies": {
     "@fontsource/roboto": "^5.0.8",
     "@fontsource/roboto-mono": "^5.0.16",
-    "@tanstack/match-sorter-utils": "^8.8.4",
-    "@tanstack/solid-table": "^8.10.7",
+    "@tanstack/match-sorter-utils": "^8.11.3",
+    "@tanstack/solid-table": "^8.11.6",
     "husky": "^8.0.3",
-    "sharp": "^0.33.0"
+    "sharp": "^0.33.2"
   }
 }
