@@ -54,8 +54,8 @@
   "dependencies": {
     "@fontsource/roboto": "^5.0.8",
     "@fontsource/roboto-mono": "^5.0.16",
-    "@tanstack/match-sorter-utils": "^8.11.3",
-    "@tanstack/solid-table": "^8.11.6",
+    "@tanstack/match-sorter-utils": "^8.11.7",
+    "@tanstack/solid-table": "^8.11.7",
     "husky": "^8.0.3",
     "sharp": "^0.33.2"
   }
