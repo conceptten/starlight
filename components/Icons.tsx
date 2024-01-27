@@ -264,3 +264,47 @@ export function Dot(props: IconProps) {
     </svg>
   );
 }
+
+export function Ethernet(props: IconProps) {
+  const merged = defaultProps(props);
+
+  return (
+    <svg
+      width={merged.width}
+      height={merged.width}
+      viewBox="0 0 24 24"
+      class={`icon${merged.class ? " " + merged.class : ""}`}
+      classList={merged.classList}
+      onClick={merged.onClick}
+      fill="currentColor"
+      style="--sl-icon-size: 1em;"
+      aria-label={merged.ariaLabel}
+      aria-hidden={merged.ariaHidden}
+    >
+      <g fill="none" stroke="currentColor" stroke-width="1.5">
+        <rect
+          width="7"
+          height="5"
+          fill="currentColor"
+          rx=".6"
+          transform="matrix(1 0 0 -1 3 22)"
+        />
+        <rect
+          width="7"
+          height="5"
+          fill="currentColor"
+          rx=".6"
+          transform="matrix(1 0 0 -1 8.5 7)"
+        />
+        <rect
+          width="7"
+          height="5"
+          fill="currentColor"
+          rx=".6"
+          transform="matrix(1 0 0 -1 14 22)"
+        />
+        <path d="M6.5 17v-3.5a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2V17M12 11.5V7" />
+      </g>
+    </svg>
+  );
+}
