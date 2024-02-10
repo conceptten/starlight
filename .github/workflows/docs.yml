@@ -3,6 +3,12 @@ name: Docs
 
 on: # yamllint disable-line rule:truthy
   workflow_call:
+    inputs:
+      SUBDIR:
+        description: starlight docs subdir (in case of monorepo)
+        required: false
+        default: ""
+        type: string
     secrets:
       SCP_HOST:
         description: hetzner cloud storage-box scp host
@@ -106,7 +112,7 @@ jobs:
 
       - name: Create docs archive
         run: |
-          mv docs/dist ./${{ github.event.repository.name }}
+          mv ./${{ inputs.SUBDIR }}/dist ./${{ github.event.repository.name }}
           tar -czf \
             "${{ github.event.repository.name }}-${{ github.ref_name }}.tar.gz" \
             "./${{ github.event.repository.name }}"
