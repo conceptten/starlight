@@ -31,32 +31,32 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@typescript-eslint/parser": "^6.19.0",
-    "@vitest/coverage-v8": "^1.2.1",
+    "@typescript-eslint/parser": "^6.21.0",
+    "@vitest/coverage-v8": "^1.2.2",
     "husky": "^8.0.0",
-    "postcss": "^8.4.33",
-    "vitest": "^1.2.1"
+    "postcss": "^8.4.35",
+    "vitest": "^1.2.2"
   },
   "peerDependencies": {
     "@astrojs/solid-js": "^4.0.1",
-    "@astrojs/starlight": ">=0.15.0",
+    "@astrojs/starlight": ">=0.18.0",
     "@astrojs/starlight-tailwind": ">=2.0.0",
-    "@astrojs/tailwind": ">=5.0.0",
-    "astro": ">=4.0.0",
-    "eslint": "^8.55.0",
+    "@astrojs/tailwind": ">=5.1.0",
+    "astro": ">=4.3.5",
+    "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-astro": "^0.31.0",
     "eslint-plugin-jsx-a11y": "^6.8.0",
-    "prettier": "^3.1.1",
+    "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0",
-    "tailwindcss": "^3.3.3"
+    "tailwindcss": "^3.4.1"
   },
   "dependencies": {
     "@fontsource/roboto": "^5.0.8",
     "@fontsource/roboto-mono": "^5.0.16",
-    "@tanstack/match-sorter-utils": "^8.11.7",
-    "@tanstack/solid-table": "^8.11.7",
-    "husky": "^8.0.3",
+    "@tanstack/match-sorter-utils": "^8.11.8",
+    "@tanstack/solid-table": "^8.11.8",
+    "husky": "^9.0.10",
     "sharp": "^0.33.2"
   }
 }
